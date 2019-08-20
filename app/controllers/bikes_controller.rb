@@ -4,7 +4,7 @@ class BikesController < ApplicationController
   end
 
   def new
-    @bikes = Bike.new
+    @bike = Bike.new
   end
 
   def create
