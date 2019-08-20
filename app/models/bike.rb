@@ -1,4 +1,4 @@
 class Bike < ApplicationRecord
-  belongs_to :user, only: [:owner_id]
+  belongs_to :owner, class_name: "User"
   has_many :bookings
 end

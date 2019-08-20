@@ -1,33 +1,33 @@
 <h1>Search Results</h1>
 
-
+<%= @bikes.each do %>
 
 <div class="card-product">
-  <img src="/images/LivWomen'sRoadbike.jpg"/>
+  <%= image_tag src="FatBike" %>
   <div class="card-product-infos">
-    <h2>Road Bike</h2>
+    <h2>Fat Bike</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
 </div>
 
 <div class="card-product">
-  <img src="FatBike" />
+   <%= image_tag src="LivWomen'sRoadbike" %>
   <div class="card-product-info">
-    <h2>Mountain Bike</h2>
+    <h2>Liv Women's Road Bike</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
 </div>
 
 <div class="card-product">
-  <img src="NorcoMountainBike" />
+  <%= image_tag src="NorcoMountainBike" %>
   <div class="card-product-infos">
-    <h2>Tri Bike</h2>
+    <h2>Norco Mountain Bike</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
 </div>
 
 <div class="card-product">
-  <img src="PeugeotFixie" />
+  <%= image_tag src="PeugeotFixie" %>
   <div class="card-product-infos">
     <h2>Peugeot Fixie</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
@@ -35,27 +35,30 @@
 </div>
 
 <div class="card-product">
-  <img src="Red_Cruiser">
+  <%= image_tag src="Red_Cruiser" %>
+  <div class="card-product-infos">
     <h2>Cruiser</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
 </div>
 
 <div class="card-product">
-  <img src="ShimanoRoadBike">
+  <%= image_tag src="ShimanoRoadBike" %>
+  <div class="card-product-infos">
     <h2>Shimano Road Bike</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
 </div>
 
 <div class="card-product">
-  <img src="StepThroughCruiser">
+    <%= image_tag src="StepThroughCruiser" %>
+    <div class="card-product-infos">
     <h2>Step Through Cruiser</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
 </div>
 <div class="card-product">
-  <img src="white_bianchi" />
+  <%= image_tag src="white_bianchi" %>
   <div class="card-product-infos">
     <h2>White Bianchi</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
