@@ -4,13 +4,13 @@ class BikesController < ApplicationController
   end
 
   def new
-    @bikes = Bike.new
+    @bike = Bike.new
   end
 
   def create
   end
 
   def show
-    @bikes = Bike.find(params[:id])
+    @bike = Bike.find(params[:id])
   end
 end
