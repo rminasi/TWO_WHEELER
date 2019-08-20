@@ -1,9 +1,8 @@
-body {
-  background: image-url("bikehp.jpg");
-  background-size: cover;
-  width: 100%;
-
-}
+// . {
+//   background: image-url("bikehp.jpg");
+//   background-size: cover;
+//   width: 100%;
+// }
 
 .footer {
   background: #00ccbc;
@@ -37,4 +36,10 @@ body {
 .title {
   margin: 25px;
   height: 300px;
+}
+
+.banner {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
 }
