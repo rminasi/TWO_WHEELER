@@ -1,2 +1,15 @@
 <h1>Bikes#new</h1>
-<p>Find me in app/views/bikes/new.html.erb</p>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>List your bike!</h1>
+      <%= simple_form_for(@bike) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :image %>
+        <%= f.button :submit, class: 'btn btn-success'%>
+      <% end %>
+    </div>
+  </div>
+</div>
