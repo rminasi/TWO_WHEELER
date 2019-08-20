@@ -1,27 +1,59 @@
-<div class="banner">
-  <div class="container">
-    <h1>Two Wheeler brings your dream bike in a speed of a click!</h1>
-    <p></p>
-    <a class="btn btn-success" href="#">Apply now</a>
+<div class="banner" style="background-image: url(<%= image_path "bikehp.jpg" %>);">
+
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "About", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "List a Bike", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Sign Up", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Login", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
   </div>
-  <div class="search">
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-success">
-      <i class="fas fa-search"></i> Search
-    </button>
+</div>
+    <div class="container">
+      <h1>Two Wheeler brings your dream bike in a speed of a click!</h1>
+      <p></p>
+      <a class="btn btn-success" href="#">Apply now</a>
+    </div>
+    <div class="search">
+      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+      <button name="button" type="submit" class="btn btn-success">
+        <i class="fas fa-search"></i> Search
+      </button>
+        </div>
+      <% end %>
+    </div>
+   <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-bicycle"></i> at Le Wagon
       </div>
-    <% end %>
-  </div>
- <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <div class="footer-copyright">
-      This footer is made with <i class="fas fa-biking"></i> at Le Wagon
     </div>
   </div>
 </div>
-
