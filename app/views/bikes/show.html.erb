@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @bike.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @bike.owner_id %>
-</p>
-
-
+<div class="bike-show">
+  <div class="bike-image">
+    <%= image_tag @bike.image %>
+  </div>
+  <div class="bike-content">
+    <h1><%= @bike.name %></h1>
+    <p><%= @bike.description %></p>
+    <%= render "bookings/new", bike: @bike, booking: @booking %>
+  </div>
+</div>

@@ -1,15 +1,22 @@
 <h1>Search Results</h1>
 
-<%= @bikes.each do |bike|%>
-
-<div class="card-product">
-  <%= cl_image_tag(bike.image,
-      width: 400, height: 300, crop: :fill) %>
-  <div class="card-product-infos">
-    <h2><%= bike.name %></h2>
-    <p><%= bike.description %></p>
-  </div>
+<div class="bicycle-index">
+  <% @bikes.each do |bike| %>
+    <%= link_to bike_path(bike) do %>
+      <div class="card-product">
+        <%= cl_image_tag(bike.image,
+            width: 400, height: 300, crop: :fill) %>
+        <div class="card-product-infos">
+          <h2><%= bike.name %></h2>
+          <p><%= bike.description %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
+
+
+
 
 <!-- <div class="card-product">
   <%#= image_tag src="FatBike" %>
@@ -74,4 +81,3 @@
   </div>
 </div>
 
-<% end %>
