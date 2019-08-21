@@ -23,20 +23,15 @@
   </div>
 </div>
     <div class="container">
-      <h1>Two Wheeler brings your dream bike in a speed of a click!</h1>
-      <p></p>
-      <a class="btn btn-success" href="#">Apply now</a>
+
     </div>
   <div class="container">
     <div class="row justify-content-left">
       <div class="col-md-8">
-        <h1>Rent a bike!</h1>
-        <%= simple_form_for Bike.new, url: search_path, method: :get do |f| %>
-         <%= f.error_notification %>
-          <%= f.input :name %>
-          <%= f.input :name %>
-          <%= f.submit :search, class: 'btn btn-success'%>
-        <% end %>
+          <h1>Two-Wheeler</h1>
+          <h2>UK's no. 1 Bike Rental Platform</h2>
+          <h5>Over 3,000,000 users active in London</h5>
+          <button class="btn btn-success"><%= link_to 'Rent a Bike', bikes_path %></button>
       </div>
     </div>
   </div>
