@@ -1,0 +1,25 @@
+.bike-show {
+  width: 100%;
+  height:  100vh;
+  background-color: white;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bike-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.bike-content {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

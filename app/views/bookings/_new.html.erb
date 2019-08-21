@@ -1,0 +1,8 @@
+<div class="new-booking">
+  <h5>Select Booking Dates:</h5>
+  <%= simple_form_for [bike, booking] do |f| %>
+    <%= f.input :rental_date %>
+    <%= f.input :return_date %>
+    <%= f.button :submit, class: 'btn btn-success'%>
+  <% end %>
+</div>
