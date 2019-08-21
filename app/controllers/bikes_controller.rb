@@ -11,6 +11,12 @@ class BikesController < ApplicationController
     @booking = Booking.new
   end
 
+  def destroy
+    @bike = Bike.find(params[:id])
+    bike.destroy
+    redirect_to bike_path
+  end
+
   def create
     @bike = Bike.new(bike_params)
     @bike.owner = current_user
