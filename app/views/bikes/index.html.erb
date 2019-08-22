@@ -3,15 +3,14 @@
 
 <div class="bikes">
   <div class="bikes-cards">
-    <% Bike.all.each do |bike| %>
+    <% @bikes.each do |bike| %>
       <div class="bike-card">
-        <div class="card-product">
-          <%= cl_image_tag(bike.image,
-              width: 400, height: 300, crop: :fill) %>
-          <div class="card-product-infos">
-            <h2><%= bike.name %></h2>
-            <p><%= bike.description %></p>
-          </div>
+        <div class="bike-image">
+          <%= cl_image_tag(bike.image) %>
+        </div>
+        <div class="bike-content">
+          <h2><%= bike.name %></h2>
+          <p><%= bike.description %></p>
         </div>
       </div>
     <% end %>
@@ -27,33 +26,3 @@
   </div>
 </div>
 
-
-
-
-<style>
-  .bikes {
-    height: 100%;
-    width: 100%;
-    display: flex;
-  }
-
-  .bikes-cards {
-    height: 100vh;
-    width: 100%;
-  }
-
-  .bike-card {
-    height: 200px;
-    width: 150px;
-  }
-
-  .bikes-map {
-    height: 100vh;
-    width: 100%;
-  }
-
-  .card-product img {
-    height: 200px;
-    width: 400px;
-  }
-</style>
