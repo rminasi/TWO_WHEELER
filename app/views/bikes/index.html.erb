@@ -13,7 +13,7 @@
           <p><%= bike.description %></p>
           <p>£<%= bike.price_per_day.to_i %></p>
           <p><%= bike.location %></p>
-          <button class="btn btn-success"><%= link_to 'Rent' %></button>
+            <%= link_to 'Rent', bike_path(bike), class:"btn btn-success" %>
         </div>
       </div>
     <% end %>
