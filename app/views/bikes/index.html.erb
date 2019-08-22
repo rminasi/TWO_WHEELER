@@ -11,6 +11,9 @@
         <div class="bike-content">
           <h2><%= bike.name %></h2>
           <p><%= bike.description %></p>
+          <p>£<%= bike.price_per_day.to_i %></p>
+          <p><%= bike.location %></p>
+          <button class="btn btn-success"><%= link_to 'Rent' %></button>
         </div>
       </div>
     <% end %>
