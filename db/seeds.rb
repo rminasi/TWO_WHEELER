@@ -6,11 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Bike.create(owner_id: 'Susan', image: 'FatBike.jpg')
-User.destroy_all
+Booking.destroy_all
 Bike.destroy_all
+User.destroy_all
 
-owner = User.create!(email: "sam@gmail.com", password: "123456")
-bike_url = "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-bike = Bike.new(name: "Touring Bike", description: "great bike")
-bike.remote_photo_url = bike_url
-bike.save!
+puts "Creating 5 users"
+5.times do |i|
+  user = User.create!(email: "user_#{i}@test.com", password: 123123)
+  puts "Creating 3 bike for #{user.email}"
+  3.times do |i|
+    bike_url = "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+    bike = Bike.new(name: "Touring Bike", description: "great bike", owner: user, location: ['Hackney, UK', 'Paris, France', 'Berlin, Germany'].sample)
+    bike.image = bike_url
+    bike.save!
+  end
+end
+
+puts 'Finished!'
+
+
+# bikeOne = Bike.create(location: '16 Villa Gaudelet, Paris', name: 'Le Wagon HQ', description: 'This is an amazing bike', image: 'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')

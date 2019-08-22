@@ -1,83 +1,59 @@
 <h1>Bikes</h1>
 
-<div class="bicycle-index">
-  <% @bikes.each do |bike| %>
-    <%= link_to bike_path(bike) do %>
-      <div class="card-product">
-        <%= cl_image_tag(bike.image,
-            width: 400, height: 300, crop: :fill) %>
-        <div class="card-product-infos">
-          <h2><%= bike.name %></h2>
-          <p><%= bike.description %></p>
+
+<div class="bikes">
+  <div class="bikes-cards">
+    <% Bike.all.each do |bike| %>
+      <div class="bike-card">
+        <div class="card-product">
+          <%= cl_image_tag(bike.image,
+              width: 400, height: 300, crop: :fill) %>
+          <div class="card-product-infos">
+            <h2><%= bike.name %></h2>
+            <p><%= bike.description %></p>
+          </div>
         </div>
       </div>
     <% end %>
-  <% end %>
-</div>
-
-
-
-
-<!-- <div class="card-product">
-  <%#= image_tag src="FatBike" %>
-  <div class="card-product-infos">
-    <h2>Fat Bike</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+  <div class="bikes-map">
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   </div>
 </div>
 
-<div class="card-product">
-   <%#= image_tag src="LivWomen'sRoadbike" %>
-  <div class="card-product-info">
-    <h2>Liv Women's Road Bike</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
 
-<div class="card-product">
-  <%#= image_tag src="NorcoMountainBike" %>
-  <div class="card-product-infos">
-    <h2>Norco Mountain Bike</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
 
-<div class="card-product">
-  <%#= image_tag src="PeugeotFixie" %>
-  <div class="card-product-infos">
-    <h2>Peugeot Fixie</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
 
-<div class="card-product">
-  <%#= image_tag src="Red_Cruiser" %>
-  <div class="card-product-infos">
-    <h2>Cruiser</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
+<style>
+  .bikes {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
 
-<div class="card-product">
-  <%#= image_tag src="ShimanoRoadBike" %>
-  <div class="card-product-infos">
-    <h2>Shimano Road Bike</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
+  .bikes-cards {
+    height: 100vh;
+    width: 100%;
+  }
 
-<div class="card-product">
-    <%#= image_tag src="StepThroughCruiser" %>
-    <div class="card-product-infos">
-    <h2>Step Through Cruiser</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
-<div class="card-product">
-  <%#= image_tag src="white_bianchi" %>
-  <div class="card-product-infos">
-    <h2>White Bianchi</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
+  .bike-card {
+    height: 200px;
+    width: 150px;
+  }
 
+  .bikes-map {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .card-product img {
+    height: 200px;
+    width: 400px;
+  }
+</style>
