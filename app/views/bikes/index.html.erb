@@ -1,23 +1,26 @@
-<h1>Bikes</h1>
+
+ <h1 style=>Bikes</h1>
+  <div class="container">
+
+    <div class="bikes-cards">
+      <% @bikes.each do |bike| %>
+        <div class="bike-card">
+          <div class="bike-image">
+            <%= cl_image_tag(bike.image) %>
+          </div>
+          <div class="bike-content">
+            <h4><%= bike.name %></h4>
+            <p><%= bike.description %></p>
+            <p>£<%= bike.price_per_day.to_i %></p>
+            <p><%= bike.location %></p>
+              <%= link_to 'Rent', bike_path(bike),  class:"btn btn-success" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
 
-<div class="bikes">
-  <div class="bikes-cards">
-    <% @bikes.each do |bike| %>
-      <div class="bike-card">
-        <div class="bike-image">
-          <%= cl_image_tag(bike.image) %>
-        </div>
-        <div class="bike-content">
-          <h2><%= bike.name %></h2>
-          <p><%= bike.description %></p>
-          <p>£<%= bike.price_per_day.to_i %></p>
-          <p><%= bike.location %></p>
-            <%= link_to 'Rent', bike_path(bike), class:"btn btn-success" %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+
   <!-- <div class="bikes-map"> -->
     <div
       id="map"
