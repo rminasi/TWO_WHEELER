@@ -11,10 +11,10 @@ Bike.destroy_all
 User.destroy_all
 
 puts "Creating 5 users"
-12.times do |i|
+6.times do |i|
   user = User.create!(email: "user_#{i}@test.com", password: 123123)
   puts "Creating 3 bike for #{user.email}"
-  12.times do |i|
+  4.times do |i|
     bike_url = ["https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
       'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 'https://images.unsplash.com/photo-1529690993619-3f2481aeda21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
       'https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
