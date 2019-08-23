@@ -1,11 +1,11 @@
+
 .navbar-lewagon {
- position: fixed;
+ display: flex;
  top: 0;
- justify-content: space-between;
- display: inline-flex;
- height: 10vh;
- padding: 0px 10px;
  width: 100%;
+ justify-content: space-between;
+ position: fixed;
+ padding: 0px 10px;
  z-index: 1000;
 }
 .navbar-lewagon .navbar-collapse {
@@ -14,4 +14,20 @@
 .navbar-lewagon .navbar-brand img {
  width: 60px;
  border-radius: 50%;
+}
+
+.nav-item {
+  margin: auto 16px;
+
+  i {
+    margin-right: 8px;
+  }
+
+  a.btn {
+      color: white;
+  }
+
+  a {
+    color: black;
+  }
 }
