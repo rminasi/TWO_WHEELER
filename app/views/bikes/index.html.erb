@@ -1,32 +1,34 @@
 
  <h1 style=>Bikes</h1>
-  <div class="container">
-
-    <div class="bikes-cards">
-      <% @bikes.each do |bike| %>
-        <div class="bike-card">
-          <div class="bike-image">
-            <%= cl_image_tag(bike.image) %>
+  <div class="main-container">
+    <div class="bike-grid-container">
+      <div class="bikes-cards">
+        <% @bikes.each do |bike| %>
+          <div class="bike-card">
+            <div class="bike-image">
+              <%= cl_image_tag(bike.image) %>
+            </div>
+            <div class="bike-content">
+              <h5><%= bike.name %></h5>
+              <p><%= bike.description %></p>
+              <p>£<%= bike.price_per_day.to_i %></p>
+              <p><%= bike.location %></p>
+                <%= link_to 'Rent', bike_path(bike),  class:"btn btn-success" %>
+            </div>
           </div>
-          <div class="bike-content">
-            <h5><%= bike.name %></h5>
-            <p><%= bike.description %></p>
-            <p>£<%= bike.price_per_day.to_i %></p>
-            <p><%= bike.location %></p>
-              <%= link_to 'Rent', bike_path(bike),  class:"btn btn-success" %>
-          </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
 
 
-
-  <!-- <div class="bikes-map"> -->
-    <div
-      id="map"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
+  <!-- <div class="map-container"> -->
+    <div class="bikes-map">
+      <div
+        id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
   <!-- </div> -->
 </div>
 
