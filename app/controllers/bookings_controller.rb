@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bike_booking_path(@bike, @booking)
     else
-      render bike_path(@bike)
+      redirect_to bike_path(@bike)
     end
   end
 
