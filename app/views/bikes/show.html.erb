@@ -6,7 +6,7 @@
   <div class="bike-content">
     <h1><%= @bike.name %></h1>
     <p><%= @bike.description %></p>
-    <p><%= @bike.price_per_day %></p>
+    <p>£<%= @bike.price_per_day.to_i %></p>
     <%= render "bookings/new", bike: @bike, booking: @booking %>
   </div>
 </div>
