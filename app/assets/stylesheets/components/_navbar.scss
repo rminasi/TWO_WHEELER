@@ -2,10 +2,11 @@
  position: fixed;
  top: 0;
  justify-content: space-between;
- display: flex;
+ display: inline-flex;
  height: 10vh;
- padding: 0px 20px;
+ padding: 0px 10px;
  width: 100%;
+ z-index: 1000;
 }
 .navbar-lewagon .navbar-collapse {
  flex-grow: 0;
