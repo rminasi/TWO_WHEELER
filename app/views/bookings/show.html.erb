@@ -1,11 +1,17 @@
-<div class="booking-show">
 
-  <h1>Get your helmet ready!</h1>
-  <h3>Your Booking has been accepted!</h3>
-  <p>Your individual booking page</p>
+<div class="booking-show" style="width: 100%;">
+  <div class="booking-card" style="width: 30%;">
+    <img src="https://tredz.azureedge.net/prodimg/72896_1_Zoom.jpg" class="card-img-top" alt="bike helmet">
+    <div class="card-body">
+      <p class="card-text">
+       <h1>Get your helmet ready!</h1>
+      <h3>Your Booking has been accepted!</h3>
+        <p>£<%= @bike.price_per_day.to_i %></p>
+        <p>Enjoy your bike! Be safe and make sure to return   it on time!</p>
+      <p><%= @booking.rental_date.strftime("%d/%m/%Y") %>   -
+      <%= @booking.return_date.strftime("%d/%m/%Y") %></p>
 
-  <%= @booking.rental_date %>
-  <%= @booking.return_date %>
-  <%= @price_per_day %>
+      </p>
+      </div>
+    </div>
 </div>
-

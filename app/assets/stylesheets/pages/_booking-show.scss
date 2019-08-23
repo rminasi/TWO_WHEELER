@@ -1,0 +1,42 @@
+.booking-show {
+display: flex;
+text-align: center;
+justify-content:center;
+align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.booking-card {
+display: grid;
+justify-content:center;
+align-items: center;
+background-color: rgba(0,204,188,0.3);
+height: 80vh;
+
+}
+
+
+.card-img-top {
+text-align: center;
+justify-content:center;
+align-items: center;
+border: 1px solid;
+border-color: rgb(0,204,188);
+}
+
+
+.card-body {
+text-align: center;
+justify-content:center;
+align-items: center;
+border: 1px solid;
+border-color: rgb(0,204,188);
+
+}
+
+.card-text {
+text-align: center;
+justify-content:center;
+align-items: center;
+}
