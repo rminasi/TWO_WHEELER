@@ -3,6 +3,7 @@
     // width: 100%;
     display: flex;
     margin: 20px;
+
   }
 
   .bikes-cards {
@@ -11,6 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
+    border-radius: 4px;
 
   }
 
@@ -26,8 +28,8 @@
   .bike-card {
     display: grid;
     border: 1px solid #dddddd;
-    border-radius: 3px;
-    box-shadow: 3px 2px 3px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     width: 250px;
   }
 
@@ -38,12 +40,15 @@
 
     & img {
       object-fit: cover;
+      border-radius: 4px 4px 0 0;
     }
   }
 
   .bikes-map {
     flex-grow: 1;
     // width: 100%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    border-radius: 4px;
   }
 
 
@@ -69,6 +74,7 @@
 .card-product img {
   height: 200px;
   width: 400px;
+  border-radius: 4px;
 }
 
 .main-container {

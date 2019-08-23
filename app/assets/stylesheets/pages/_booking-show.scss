@@ -12,7 +12,9 @@ display: grid;
 justify-content:center;
 align-items: center;
 background-color: rgba(0,204,188,0.3);
-height: 80vh;
+// height: 80vh;
+border-radius: 4px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }
 
@@ -23,6 +25,7 @@ justify-content:center;
 align-items: center;
 border: 1px solid;
 border-color: rgb(0,204,188);
+border-radius: 4px 4px 0 0;
 }
 
 
@@ -32,7 +35,7 @@ justify-content:center;
 align-items: center;
 border: 1px solid;
 border-color: rgb(0,204,188);
-
+border-radius: 0 0 4px 4px;
 }
 
 .card-text {
