@@ -11,6 +11,7 @@ Bike.destroy_all
 User.destroy_all
 
 puts "Creating 5 users"
+User.create(email: 'susan@email.com', password: '123456')
 3.times do |i|
   user = User.create!(email: "user_#{i}@test.com", password: 123123)
   puts "Creating 3 bike for #{user.email}"
