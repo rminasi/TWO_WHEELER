@@ -3,6 +3,8 @@
     // width: 100%;
     display: flex;
     margin: 20px;
+    position: absolute;
+    top: 140px;
 
   }
 
@@ -78,13 +80,16 @@
 
 .main-container {
   display: flex;
-  margin: 0 20px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .map-container {
   flex-grow: 1;
 }
 
-.bike-grid-container {
+.list-bike {
+  display: contents;
 
 }
